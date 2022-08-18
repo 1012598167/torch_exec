@@ -21,7 +21,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 # So torch does not have placeholder, torch can just pass variable to the computational graph.
 torch.set_default_tensor_type(torch.FloatTensor)
 
-tensor = torch.Tensor([[1,2],[3,4]])#.cuda()            # build a tensor
+tensor = torch.Tensor([[1,2],[3,4]]).cuda()            # build a tensor
 #variable = Variable(tensor, requires_grad=True)      # build a variable, usually for compute gradients
 variable = tensor
 variable.requires_grad = True                       # set requires_grad to True
